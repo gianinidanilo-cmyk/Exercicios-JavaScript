@@ -1,0 +1,20 @@
+const frm = document.querySelector("form");
+const resp = document.querySelector("h3");
+
+
+frm.addEventListener("submit", (e) =>{
+    e.preventDefault();
+
+    const numero = Number(frm.inNumero.value);
+
+   // if (numero % 2 == 0) {
+    //    resp.innerText = `O número ${numero} é par`;
+   // }
+   // else {
+   //     resp.innerText = `O número ${numero} é impar`;
+   // }
+
+   const resposta = numero % 2 == 0 ? "é par" : "Impar";  // Operador alternário
+   resp.innerText = `${numero} ${resposta}`;
+
+})
